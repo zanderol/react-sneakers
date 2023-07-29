@@ -1,6 +1,30 @@
 function App() {
   return (
     <div className="wrapper clear">
+      <div className="overlay">
+        <div className="drawer">
+          <h2>Cart</h2>
+
+          <div className="cartItem d-flex align-center">
+            {/* <img
+              className="mr-20"
+              width={70}
+              height={70}
+              src="/img/sneakers/1.jpg"
+              alt="Sneakers"
+            /> */}
+            <div
+              style={{ backgroundImage: "url(/img/sneakers/1.jpg)" }}
+              className="cartItemImg"
+            ></div>
+            <div className="mr-20 d-flex">
+              <p className="mb-5">Men&apos;s shoes Nike Blazer Mid Suede</p>
+              <b>129.99 USD</b>
+            </div>
+            <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove" />
+          </div>
+        </div>
+      </div>
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
           {" "}
@@ -21,10 +45,19 @@ function App() {
         </ul>
       </header>
       <div className="content p-40">
-        <h1 className="mb-40">All shoes</h1>
+        <div className="d-flex align-center justify-between mb-40">
+          <h1>All shoes</h1>
+          <div className="search-block d-flex">
+            <img src="/img/search.svg" alt="Search" />
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
         .....
         <div className="d-flex">
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart-neutral.svg" alt="Neutral" />
+            </div>
             <img
               width={133}
               height={112}
