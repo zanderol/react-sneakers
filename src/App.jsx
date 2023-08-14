@@ -1,4 +1,4 @@
-import Card from "./components/Card";
+import Card from "./components/Card/Card";
 import Drawer from "./components/Drawer";
 import Header from "./components/Header";
 
@@ -82,7 +82,13 @@ function App() {
         .....
         <div className="d-flex">
           {goods.map((obj) => (
-            <Card title={obj.title} price={obj.price} imageUrl={obj.imageUrl} />
+            <Card
+              title={obj.title}
+              price={obj.price}
+              imageUrl={obj.imageUrl}
+              onClickFavorite={() => console.log("Added to favorite")}
+              onClickPlus={() => console.log("Clicked on Plus")}
+            />
           ))}
         </div>
       </div>
